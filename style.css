@@ -1,0 +1,155 @@
+img {
+  margin-top: 15px;
+}
+
+p {
+  padding-top: 100px;
+  line-height: 150%;
+}
+
+iframe {
+  padding-top: 100px;
+  padding-left: 250px;
+  float: left;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.clearfix {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+header {
+  height: 75px;
+  background-color: #000;
+  border: 1px solid #253342;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+
+h1 {
+  color: white;
+  line-height: 75px;
+  float: left;
+}
+
+.menu {
+  float: right;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu a {
+  line-height: 75px;
+  color: white;
+  padding: 0 15px;
+  display: block;
+}
+
+body {
+  padding: 60px;
+  background: #f3f3f3;
+  min-height: 100vh;
+}
+
+@keyframes sparkle {
+  from {
+    background-position: 0% 100%;
+  }
+  to {
+    background-position: 800% 100%;
+  }
+}
+.test {
+  background: white;
+  display: inline-block;
+  padding: 1em;
+  font-family: Helvetica Neue;
+  border-radius: 4px;
+  position: relative;
+  margin-left: 630px;
+}
+.test:before {
+  animation: sparkle 4s infinite linear;
+  background: linear-gradient(90deg, #7FEFBD 0%, #FFF689 11%, #EC0B43 22%, #7FEFBD 33%, #FFF689 44%, #EC0B43 55%, #7FEFBD 66%, #FFF689 77%, #EC0B43 88%, #7FEFBD 100%);
+  background-size: 200% 100%;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  filter: blur(3px);
+  z-index: -1;
+  transform: scale(0.99) translateY(3px);
+}
+
+h2 {
+  font-family: 'Arial';
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 0.75;
+}
+
+span {
+  display: block;
+}
+
+span:not(.light) {
+  opacity: 0;
+  animation: flashText .5s ease-out alternate infinite;
+}
+
+span.light {
+  position: relative;
+  display: inline-block;
+}
+span.light:before {
+  position: absolute;
+  left: 0;
+  top: 15%;
+  width: 100%;
+  height: 70%;
+  background: #fff;
+  filter: blur(10px);
+  content: "";
+  opacity: 0;
+  animation: flash .5s ease-out alternate infinite;
+}
+
+@keyframes flash {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes flashText {
+  to {
+    opacity: 0.15;
+  }
+}
